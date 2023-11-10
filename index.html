@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess the number</title>
+  </head>
+  <body onload="init()">
+    <main>
+      <div id="welcomeScreen">
+        <h2>Advinhe o Número<br />1 - 100</h2>
+      </div>
+
+      <div id="gameArea">
+        <section>
+          <h3 id="textOutput"></h3>
+          <input
+            type="number"
+            id="inputBox"
+            min="1"
+            max="100"
+            onchange="compareNumbers()"
+          />
+        </section>
+        <section class="stats">
+          <div class="info">
+            <p>Numero de tentativas:</p>
+            <span id="tentativas"></span>
+          </div>
+          <div class="info">
+            <p>Suas tentativas:</p>
+            <span id="sugestao">0</span>
+          </div>
+          <div class="info">
+            <p>Tentativas Restantes:</p>
+            <span id="tentativasRestantes"></span>
+          </div>
+        </section>
+        <button id="newGameButton" onclick="newGame()">NOVO JOGO</button>
+      </div>
+    </main>
+    <script src="index.js"></script>
+    <p style="text-align: center">Desenvolvido por: Raphael Rezende Reis</p>
+  </body>
+</html>
